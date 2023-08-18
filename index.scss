@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    list-style: none;
+}
+.cmp-bookmarkApp{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F5F7FA;
+    padding: 30px;
+    &__container{
+        max-width: 1200px;
+        margin: auto;
+        &__heading{
+            margin: 30px auto;
+            &--title{
+                font-size: 30px;
+                color: #000000;
+                font-weight: 500;
+                text-align: center;
+            }
+            &--subtitle{
+                font-size: 20px;
+                color: #000000;
+                font-weight: 300;
+                text-align: center;
+
+            }
+        }
+        &__create{
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            &__add{
+                display: flex;
+                // justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 20px;
+                @media(max-width: 800px){
+                    flex-direction: column;
+                }
+                input, select{
+                    font-size: 18px;
+                    border-radius: 7px;
+                    border: 1px solid #D1D1D1;
+                    padding: 10px;
+                }
+                option{
+                    font-size: 18px;
+                }
+                #link{
+                    flex-grow: 1;
+                }
+                #bookmark{
+                    border: 0px;
+                    border-radius: 3px;
+                    background-color: #2666CF;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                }
+            }
+        }
+        &__bookmark{
+            &__categoryList{
+                margin: 40px 0px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                span{
+                    padding: 10px;
+                    border-radius: 3px;
+                    background-color: #FFFFFF;
+                    margin: 5px;
+                    cursor: pointer;
+                }
+                span:hover{
+                    background-color: #EAEBEF;
+                }
+                &--active{
+                    background-color: #0D479a !important;
+                    color: #FFFFFF;
+                }
+            }
+            &__cards{
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 25px 0px;
+                &__card{
+                    background-color: #FFFFFF;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 350px;
+                    margin: 7px 0px;
+                    @media(max-width: 800px){
+                        flex-grow: 1;
+                    }
+                    &--title{
+                        margin-bottom: 25px;
+                    }
+                    &__subInformation{
+                        display: flex;
+                        // justify-content: space-between;
+                        margin-top: 10px;
+                        p{
+                            flex-grow: 1;
+                        }
+                        &__category{
+                            background-color: #233E8B;
+                            padding: 5px 7px;
+                            border-radius: 3px;
+                            color: #FFFFFF;
+                            &--youtube{
+                                background-color: #4d4d4d;
+                            }
+                            &--netflix{
+                                background-color: #b3010a;
+                            }
+                            &--prime{
+                                background-color: #1468c2;
+                            }
+                            &--others{
+                                background-color: #c47600;
+                            }
+                        }
+                        i{
+                            margin: 7px;
+                            font-size: 18px;
+                        }
+                        &--website{
+                            color: #393E46;
+                        }
+                        &--search{
+                            color: #2666CF;
+                        }
+                        &--delete{
+                            color: #EB596E;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &__card:hover{
+                    background-color: #EAEBEF;
+                }
+            }
+        }
+    }
+}
